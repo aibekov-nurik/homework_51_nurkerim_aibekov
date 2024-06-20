@@ -1,0 +1,15 @@
+<!-- cat_app/templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Cat Simulator</title>
+</head>
+<body>
+    <h1>Welcome! Please name your cat:</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
